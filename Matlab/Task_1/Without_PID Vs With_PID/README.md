@@ -1,4 +1,6 @@
 # comparing closed vs open loop control
 
-https://user-images.githubusercontent.com/120835150/218342598-b7b8cee3-94b5-4c4b-acd8-1b883dea42a0.mp4
+https://user-images.githubusercontent.com/120835150/218342977-cd0e9270-ae77-4c5d-8feb-19271e1c04e4.mp4
+
+
 
