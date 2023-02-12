@@ -1,5 +1,4 @@
 # comparing closed vs open loop control
 
-https://www.youtube.com/watch?v=azPfYb9aUpU
-https://www.youtube.com/embed/azPfYb9aUpU
-<iframe src="https://www.youtube.com/embed/xvFZjo5PgG0"></iframe>
+https://user-images.githubusercontent.com/120835150/218342598-b7b8cee3-94b5-4c4b-acd8-1b883dea42a0.mp4
+
