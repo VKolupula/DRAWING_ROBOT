@@ -1,13 +1,12 @@
 function segments = connectSegments(segments)
-% Copyright 2018 - 2020 The MathWorks, Inc.
-%
-% If a segment intersects itself, such as in the letter "O," it will end at
-% a point that is adjacent to another pixel in that segment. This will 
-% create a small gap when drawn on the whiteboard. To correct this, add the
-% final adjacent pixel to the end of that segment so the line is closed. 
-% This section of code looks at each segment, finds any self-intersections,
-% and closes them. p1 is the first point in a segment. pN is the last point
-% in the segment. Add any points near p1 to the beginning of the segment. 
+
+% If a segment intersects itself, such as in the letter "O," 
+% it will end at a point that is adjacent to another pixel in that segment. 
+% This will create a small gap when drawn on the whiteboard. 
+% To correct this, add the final adjacent pixel to the end of that segment so the line is closed. 
+% This section of code looks at each segment, finds any self-intersections, and closes them. 
+% p1 is the first point in a segment. pN is the last point in the segment. 
+% Add any points near p1 to the beginning of the segment. 
 % Add any points near pN to the end of the segment.
 
 for ii = 1:length(segments)
