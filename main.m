@@ -1,4 +1,4 @@
-% Capture image from webcam 
+% Load or Capture image 
 clear
 img = getimgfile();
 

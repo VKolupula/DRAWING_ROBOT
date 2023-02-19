@@ -1,6 +1,7 @@
 function img = getimgfile()
 input_type = 0;
 while input_type == 0
+    
     input_type = inputdlg('Enter input type: ("1" for camera (Note: press any key to capture image)) or ("2" for image file)',...
                  'Input Type', [1 75]);
     input_type = str2num(input_type{1});
