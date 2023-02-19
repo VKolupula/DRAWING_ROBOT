@@ -25,6 +25,14 @@ Expanding this equation and solving for x, we end up with the following equation
 
 ![xyformula](https://user-images.githubusercontent.com/120835150/219977591-9dbecc8a-928d-42c5-b2c0-7be39d1def9c.PNG)
 
+### Convert Target position to Angular Displacement
+
+Using previous equation Z1 and Z2 computed the change in Z and the equivalent change in the string length.
+![changeinz](https://user-images.githubusercontent.com/120835150/219978265-2519a5d0-0019-43cf-bf7f-4a970163eb93.PNG)
+
+using arc-length definition to convert the change in string length to the desired angular displacement value in radians.
+![theta](https://user-images.githubusercontent.com/120835150/219978399-16e5e379-e0ba-45d4-aa4d-e5b29240579f.PNG)
+
 
 ## Limitations of the Robot Movement
 
