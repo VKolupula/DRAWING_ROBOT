@@ -22,6 +22,7 @@ If we solve the second equation for y^2, the first equation can be rewritten as,
 ![z1z2formula](https://user-images.githubusercontent.com/120835150/219977759-386c8357-ab19-4bdd-956a-a7634923b913.PNG)
 
 Expanding this equation and solving for x, we end up with the following equations to solve for x and y sequentially.
+
 ![xyformula](https://user-images.githubusercontent.com/120835150/219977591-9dbecc8a-928d-42c5-b2c0-7be39d1def9c.PNG)
 
 
