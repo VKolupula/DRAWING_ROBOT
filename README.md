@@ -13,6 +13,17 @@
 ![1600781717-aek-ch4-sc4-2-define-distance-02](https://user-images.githubusercontent.com/120835150/219977172-91207024-ee42-460f-9767-39f0e8a19f4d.jpg)
 
 ### Apply the Pythagorean theoram for the Distance
+![1600781720-aek-ch4-sc4-2-define-distance-03](https://user-images.githubusercontent.com/120835150/219977243-a05363d3-413f-45ab-b290-6ab16278579c.jpg)
+
+The sides of these triangles have the following relationships.
+![z1z2formula](https://user-images.githubusercontent.com/120835150/219977685-e6281abd-07eb-432e-b23a-8006e32eab63.PNG)
+
+If we solve the second equation for y^2, the first equation can be rewritten as,
+![z1z2formula](https://user-images.githubusercontent.com/120835150/219977759-386c8357-ab19-4bdd-956a-a7634923b913.PNG)
+
+Expanding this equation and solving for x, we end up with the following equations to solve for x and y sequentially.
+![xyformula](https://user-images.githubusercontent.com/120835150/219977591-9dbecc8a-928d-42c5-b2c0-7be39d1def9c.PNG)
+
 
 ## Limitations of the Robot Movement
 
