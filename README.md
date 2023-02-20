@@ -45,8 +45,17 @@ Using previous equation Z1 and Z2 computed the change in Z and the equivalent ch
 using arc-length definition to convert the change in string length to the desired angular displacement value in radians.
 
 ![theta](https://user-images.githubusercontent.com/120835150/219978399-16e5e379-e0ba-45d4-aa4d-e5b29240579f.PNG)
-### Converting Position to Angular Rotations
+The function "xyToRadians()" converts position to angle using xy,Z_i and Base measurements.
 
+![xytoradianscode](https://user-images.githubusercontent.com/120835150/220169098-b19a9672-0080-4b77-bfb1-d3fc195496a8.PNG)
+### To move the robot through a series of specified positions on the whiteboard
+To move the robot through a series of specified positions on the whiteboard, the function moveToRadians() has been used.
+
+This function makes use of the angular displacement values obtained from the previous calculations to drive the motors to the specified locations. The functions uses a Closed-Loop Control to achieve the position control.
+
+A ‘For-Loop’ has been implemented to vectorize the function moveToRadians(), thereby allowing it to accept a vector input containing a series of target angular displacement values.
+
+The function writeAngularPosition() automatically starts and stops the motors after achieving the target angular displacement value. The PID algorithm implemented underneath constantly tracks the input values and hence responds to any changes in the input immediately.
 
 ## Limitations of the Robot Movement
 
