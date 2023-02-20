@@ -140,4 +140,22 @@ Defining the part of the whiteboard that the robot is allowed to draw on. which 
 
 ## Image Processing
 
- process an image to extract the relevant data necessary to make the drawings on the whiteboard. By applying some image filters, obtain the line traces from the image, convert the resulting pixels to meters and then finally build segments to create the trajectory that the robot will follow.
+Process an image to extract the relevant data necessary to make the drawings on the whiteboard. By applying some image filters, obtain the line traces from the image, convert the resulting pixels to meters and then finally build segments to create the trajectory that the robot will follow.
+Original Image:
+![racecar](https://user-images.githubusercontent.com/120835150/220196581-eaa7c4c8-b573-4b4b-bb27-5805200ceee7.jpg)
+
+To convert a image from pixel information to positions and pathways to draw.
+the image is first read and converted RGB to grayscale using Matlab function "rgb2gray", then it is converted to a Binary image.
+
+Grayscale Image:
+![racecargrayscale](https://user-images.githubusercontent.com/120835150/220197600-beb2500d-39ae-452c-bfe1-cac5a9ea4765.png)
+
+Binary images are images wherein each pixel is either on or off. These are visualized in pure black-and-white, which can be useful for describing specific regions or objects in an image. A grayscale image can be converted to a binary image with the help of the MATLAB function "imbinarize". 
+
+Binary Images
+![racecarbinary](https://user-images.githubusercontent.com/120835150/220197689-3a76a687-c2e3-4d1b-a3b4-2013d098093f.png)
+
+This function replaces all values above a certain threshold with 1 and those below the threshold with 0. The threshold can be global or regional.then the image is processed to reduce the thickness and make a single-pixel wide line segments.
+
+Processed Binary Images with single-pixel width
+![racecarprocessed](https://user-images.githubusercontent.com/120835150/220197908-889ef1ac-e9a7-4f8f-b56e-4ce82c185cc4.png)
