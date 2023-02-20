@@ -99,6 +99,10 @@ Given an x-y position on the whiteboard, it is possible to compute the torque re
 
 ![T1T2formula](https://user-images.githubusercontent.com/120835150/220178853-66a4e3a5-3033-4178-a8be-4b8448a73227.PNG)
 
+![1600781659-aek-ch4-sc4-4-spool-equation](https://user-images.githubusercontent.com/120835150/220179562-eadc13df-4e33-4952-8a68-29f5e7817c6e.jpg)
+
+![T1T2referencetoradiusofspool](https://user-images.githubusercontent.com/120835150/220179966-d810578f-ffa7-467e-bae1-9f4e96d8f08e.PNG)
+
 ![1600781650-aek-ch4-sc4-4-free-body-diagram-02](https://user-images.githubusercontent.com/120835150/220178423-e332216b-e495-415f-87bf-965d5b3ce967.jpg)
 
 ![1600781652-aek-ch4-sc4-4-free-body-diagram-03](https://user-images.githubusercontent.com/120835150/220178449-6b68d77e-b948-4615-8af9-60bdbb309f07.jpg)
