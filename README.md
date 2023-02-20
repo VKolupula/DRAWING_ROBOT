@@ -101,13 +101,13 @@ Given an x-y position on the whiteboard, it is possible to compute the torque re
 
 ![1600781650-aek-ch4-sc4-4-free-body-diagram-02](https://user-images.githubusercontent.com/120835150/220178423-e332216b-e495-415f-87bf-965d5b3ce967.jpg)
 
-![F1F2formula](https://user-images.githubusercontent.com/120835150/220178877-87610b31-4a8a-4d2f-9197-68210ccc7bb2.PNG)
-![theta1theta2formula](https://user-images.githubusercontent.com/120835150/220178900-02a718f4-f51e-434d-964e-3ba4600afd46.PNG)
-
 ![1600781652-aek-ch4-sc4-4-free-body-diagram-03](https://user-images.githubusercontent.com/120835150/220178449-6b68d77e-b948-4615-8af9-60bdbb309f07.jpg)
+
+![theta1theta2formula](https://user-images.githubusercontent.com/120835150/220178900-02a718f4-f51e-434d-964e-3ba4600afd46.PNG)
 
 ![1600781656-aek-ch4-sc4-4-free-body-diagram-04](https://user-images.githubusercontent.com/120835150/220178459-98ac44e0-00eb-4bbb-a333-0dcdf6d217d3.jpg)
 
+![F1F2formula](https://user-images.githubusercontent.com/120835150/220178877-87610b31-4a8a-4d2f-9197-68210ccc7bb2.PNG)
 
 
 ## Image Processing
