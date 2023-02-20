@@ -138,33 +138,33 @@ Defining the part of the whiteboard that the robot is allowed to draw on. which 
 ## Image Processing
 Process an image to extract the relevant data necessary to make the drawings on the whiteboard. By applying some image filters, obtain the line traces from the image, convert the resulting pixels to meters and then finally build segments to create the trajectory that the robot will follow.
 
-Original Image:
+#### Original Image:
 
 ![racecar](https://user-images.githubusercontent.com/120835150/220196581-eaa7c4c8-b573-4b4b-bb27-5805200ceee7.jpg)
 
 To convert a image from pixel information to positions and pathways to draw.
 the image is first read and converted RGB to grayscale using Matlab function "rgb2gray", then it is converted to a Binary image.
 
-Grayscale Image:
+#### Grayscale Image:
 
 ![racecargrayscale](https://user-images.githubusercontent.com/120835150/220198694-369fa3c6-9f37-4080-801e-663541584739.png)
 
 
 Binary images are images wherein each pixel is either on or off. These are visualized in pure black-and-white, which can be useful for describing specific regions or objects in an image. A grayscale image can be converted to a binary image with the help of the MATLAB function "imbinarize". 
 
-Binary Image:
+#### Binary Image:
 
 ![racecarbinary](https://user-images.githubusercontent.com/120835150/220197689-3a76a687-c2e3-4d1b-a3b4-2013d098093f.png)
 
 This function replaces all values above a certain threshold with 1 and those below the threshold with 0. The threshold can be global or regional.then the image is processed to reduce the thickness.
 
-Processed Binary Image with reduced line width:
+#### Processed Binary Image with reduced line width:
 
 ![racecarprocessed](https://user-images.githubusercontent.com/120835150/220197908-889ef1ac-e9a7-4f8f-b56e-4ce82c185cc4.png)
 
 The "getCoords()" Function help extract traces from an image in the form of pairs of coordinate values that constitute the various lines and curves. It’s a recursive function that continues to call itself while there are still pixels available in the binarized image and then concatenates them into a single array. This function, in turn, calls the Image Processing Toolbox function bwboundaries recursively, stripping off the outer pixel boundaries from the image each time and concatenating them.
 
-Binary Image data converted to pixel location:
+#### Binary Image data converted to pixel location:
 
 ![racecarpixelinorder](https://user-images.githubusercontent.com/120835150/220200285-23e71393-d934-45d5-acb6-60b5a5f4ec33.png)
 
@@ -172,13 +172,13 @@ The a sequence of data pairs obtained with the "getCoords" function, the differe
 
 The "coords2segments()" function looks at every pair of pixels and determines locations where they are not adjacent. It then splits coordsPix into sets of contiguous pixels, storing each in a separate cell as elements of the cell array segmentsPix.
 
-coordinates list Break into contiguous segments:
+#### coordinates list Break into contiguous segments:
 
 ![racecarinsegments](https://user-images.githubusercontent.com/120835150/220201270-cbce621c-c642-4ced-bc8a-48ab7ecc9545.png)
 
 From the previous function, there might be segments with adjacent endpoints that could be merged with one another. This could reduce the total number of segments in the image. The function "connectSegments" does two things. First, it closes any segments that intersect themselves. Secondly, it merges any segments whose endpoints are adjacent. and also x and y pixel limits are Stored to scale the pixel values to meters.
 
-Merged connected segments:
+#### Merged connected segments:
 
 ![racecarconnetedsegments](https://user-images.githubusercontent.com/120835150/220201887-8c03ff95-9a17-46a4-93a9-320663c40800.png)
 
