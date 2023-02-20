@@ -127,8 +127,8 @@ Using the surface plot to visualize motor load Tau, at every position on the whi
 
 ![tauateverypoint](https://user-images.githubusercontent.com/120835150/220182706-ea3e6085-56c8-46c1-9e6d-1003378e17db.png)
 
-### Eliminate Bad Regions 
-removeing the regions the robot should not move to, on the Torque Map. These include two types of regions. First, removeing the regions where the torque is too high. Then removeing the regions where the robot cannot go because it is too close to the pulleys or bottom of the whiteboard.
+### Eliminating Bad Regions from the Torque Map
+Removeing the regions the robot should not move to, on the Torque Map. These include two types of regions. First, removeing the regions where the torque is too high. Then removeing the regions where the robot cannot go because it is too close to the pulleys or bottom of the whiteboard.
 
 ![plotallowableregion](https://user-images.githubusercontent.com/120835150/220183260-b5290d29-53b8-405e-8011-fbf8659d7935.png)
 
