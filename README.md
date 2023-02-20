@@ -151,7 +151,8 @@ the image is first read and converted RGB to grayscale using Matlab function "rg
 
 Grayscale Image:
 
-![racecargrayscale](https://user-images.githubusercontent.com/120835150/220197600-beb2500d-39ae-452c-bfe1-cac5a9ea4765.png)
+![racecargrayscale](https://user-images.githubusercontent.com/120835150/220198694-369fa3c6-9f37-4080-801e-663541584739.png)
+
 
 Binary images are images wherein each pixel is either on or off. These are visualized in pure black-and-white, which can be useful for describing specific regions or objects in an image. A grayscale image can be converted to a binary image with the help of the MATLAB function "imbinarize". 
 
