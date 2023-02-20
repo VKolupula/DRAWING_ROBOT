@@ -27,6 +27,15 @@ Expanding this equation and solving for x, we end up with the following equation
 
 ![xyformula](https://user-images.githubusercontent.com/120835150/219977591-9dbecc8a-928d-42c5-b2c0-7be39d1def9c.PNG)
 
+### Requesting the initial string length measurements from the user and convert to XY measurements.
+In the function "initialPosition()" the user is requested for the initial string length measurements Z1 and Z2.
+
+![initialpositioncode](https://user-images.githubusercontent.com/120835150/220167332-600b06ca-ac3f-4dcc-9745-d14a8c46208d.PNG)
+
+The Z1 and Z2 values are passed to the function "countsToXY(counts,Z_i,Base)" which takes the counts,Z_i and Base as inputs and gives XY as outputs.
+
+![counttoxycode](https://user-images.githubusercontent.com/120835150/220167667-3afdcaa2-f0f9-40a5-81bd-dd9201b2dc74.PNG)
+
 ### Convert Target position to Angular Displacement
 
 Using previous equation Z1 and Z2 computed the change in Z and the equivalent change in the string length.
@@ -36,6 +45,7 @@ Using previous equation Z1 and Z2 computed the change in Z and the equivalent ch
 using arc-length definition to convert the change in string length to the desired angular displacement value in radians.
 
 ![theta](https://user-images.githubusercontent.com/120835150/219978399-16e5e379-e0ba-45d4-aa4d-e5b29240579f.PNG)
+### Converting Position to Angular Rotations
 
 
 ## Limitations of the Robot Movement
