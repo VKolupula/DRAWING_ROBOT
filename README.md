@@ -60,7 +60,44 @@ The function writeAngularPosition() automatically starts and stops the motors af
 ## Limitations of the Robot Movement
 
  After knowing how to program the robot movements, learned about some practical limitations of drawing using the robot and which areas are preferable to recreate the drawings.
- 
+
+### Identify Position Limits
+
+If you try to move the robot to the top of the whiteboard, it won't have enough power to move above a certain point. If you try to move it too close to the pulleys, it will collide with them and get stuck. At the bottom of your whiteboard, there may be a marker tray you don't want the robot to run into.
+
+To determine what parts of the whiteboard the robot can reach and what parts you should avoid moving the robot to.
+
+### Understand Motor Equations and Stall Conditions
+For a DC motor, a mathematical equation can be used to describe the relationship between motor load (torque), supply voltage, and rotational speed. This is sometimes referred to as the DC motor torque equation:
+
+![DCmotortorqueequation](https://user-images.githubusercontent.com/120835150/220174909-99b03ebd-afb5-4ebb-9a28-ff3e1626dbf6.PNG)
+
+In this equation, T is the motor torque or motor load, V is the supply voltage, and w is the angular speed (note that in some versions of this equation, the variable T is used for torque. For our project, we'll reserve T to use for tension). R refers to the resistance in the motor windings, and k is the motor constant. The values of both R and k are constant for a given motor. 
+
+There are two special cases that we can consider for this equation. One case refers to the situation when there is no load on the motor. In this case, T = 0, and the equation simplifies to the following:
+
+![noloadmotorcase](https://user-images.githubusercontent.com/120835150/220175700-125d9f5e-a9ab-43f7-9ca1-187b0049403f.PNG)
+
+The second special case is when the motor reaches stall conditions. This is when the load is so high that the motor cannot spin. In this case, w = 0, and the equation simplifies to the following:
+
+![motorstallcaseformula](https://user-images.githubusercontent.com/120835150/220175879-a979218d-9629-4aa5-bcf6-1f6ae1429867.PNG)
+
+### Calculate Maximum Allowable Load
+
+Considering the stall condition for the Drawing robot with the given battery and motor constants. Calculating the theoretical stall torque for given battery.
+
+![stalltorqueforbattery](https://user-images.githubusercontent.com/120835150/220177122-a7d026c5-b363-4f0a-878a-f1e12216ee96.PNG)
+
+It's recommended not to exceed 30% of the stall torque of the motor. Given this constraint, calculating the maximum allowable torque to apply to the motor.
+
+![recommendedstallmaxformula](https://user-images.githubusercontent.com/120835150/220177277-c2b3af68-aaff-46e2-bd48-aaf829507866.PNG)
+
+### Computing Torque From X-Y Position
+Given an x-y position on the whiteboard, it is possible to compute the torque requirements for the motors. 
+
+![1600781646-aek-ch4-sc4-4-free-body-diagram-01](https://user-images.githubusercontent.com/120835150/220178173-f148f4d9-c8ea-4c2c-982c-5712ef2247a7.jpg)
+
+
 ## Image Processing
 
  process an image to extract the relevant data necessary to make the drawings on the whiteboard. By applying some image filters, obtain the line traces from the image, convert the resulting pixels to meters and then finally build segments to create the trajectory that the robot will follow.
