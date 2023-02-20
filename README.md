@@ -172,7 +172,7 @@ The a sequence of data pairs obtained with the "getCoords" function, the differe
 
 The "coords2segments()" function looks at every pair of pixels and determines locations where they are not adjacent. It then splits coordsPix into sets of contiguous pixels, storing each in a separate cell as elements of the cell array segmentsPix.
 
-#### coordinates list Break into contiguous segments:
+#### Coordinates list Breaked into contiguous segments:
 
 ![racecarinsegments](https://user-images.githubusercontent.com/120835150/220201270-cbce621c-c642-4ced-bc8a-48ab7ecc9545.png)
 
