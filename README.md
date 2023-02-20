@@ -32,7 +32,7 @@ In the function "initialPosition()" the user is requested for the initial string
 
 ![initialpositioncode](https://user-images.githubusercontent.com/120835150/220167332-600b06ca-ac3f-4dcc-9745-d14a8c46208d.PNG)
 
-The Z1 and Z2 values are passed to the function "countsToXY(counts,Z_i,Base)" which takes the counts,Z_i and Base as inputs and gives XY as outputs.
+The function "countsToXY(counts,Z_i,Base)" calculates the XY position of the Drawing robot using counts,Z_i and Base values.
 
 ![counttoxycode](https://user-images.githubusercontent.com/120835150/220167667-3afdcaa2-f0f9-40a5-81bd-dd9201b2dc74.PNG)
 
