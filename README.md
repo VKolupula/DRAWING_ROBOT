@@ -97,9 +97,15 @@ Given an x-y position on the whiteboard, it is possible to compute the torque re
 
 ![1600781646-aek-ch4-sc4-4-free-body-diagram-01](https://user-images.githubusercontent.com/120835150/220178173-f148f4d9-c8ea-4c2c-982c-5712ef2247a7.jpg)
 
+To compute T1, T2 from F1, F2, the resultant force pulling the robot in the direction of a pulley equals twice the amount of tension in the string over that pulley. This is because for a given pulley, the string supports the robot at two different points.
+
 ![T1T2formula](https://user-images.githubusercontent.com/120835150/220178853-66a4e3a5-3033-4178-a8be-4b8448a73227.PNG)
 
 ![1600781659-aek-ch4-sc4-4-spool-equation](https://user-images.githubusercontent.com/120835150/220179562-eadc13df-4e33-4952-8a68-29f5e7817c6e.jpg)
+
+computing the required torque from the tension in the string. Each one of the two strings pulls the motor in a direction perpendicular to the line joining the center of the spool to the point where the string touches the motor.
+
+The magnitude of the torque is then given as the product of the perpendicular force and the distance between the axis of rotation and the point where the force is applied. In our case, this distance refers to the radius of the spool "rspool".
 
 ![T1T2referencetoradiusofspool](https://user-images.githubusercontent.com/120835150/220179966-d810578f-ffa7-467e-bae1-9f4e96d8f08e.PNG)
 
@@ -113,6 +119,24 @@ Given an x-y position on the whiteboard, it is possible to compute the torque re
 
 ![F1F2formula](https://user-images.githubusercontent.com/120835150/220178877-87610b31-4a8a-4d2f-9197-68210ccc7bb2.PNG)
 
+### Compute torque at every position
+
+Computing the torque load on each motor at every grid point. defining a single variable Tau that contains the larger of the two torque values at every position. You must never move the robot to a location where this value is greater than TauMax
+ 
+Using the surface plot to visualize motor load Tau, at every position on the whiteboard.
+
+![tauateverypoint](https://user-images.githubusercontent.com/120835150/220182706-ea3e6085-56c8-46c1-9e6d-1003378e17db.png)
+
+### Eliminate Bad Regions 
+removeing the regions the robot should not move to, on the Torque Map. These include two types of regions. First, removeing the regions where the torque is too high. Then removeing the regions where the robot cannot go because it is too close to the pulleys or bottom of the whiteboard.
+
+![plotallowableregion](https://user-images.githubusercontent.com/120835150/220183260-b5290d29-53b8-405e-8011-fbf8659d7935.png)
+
+### Define and Save Drawing Limits of the Whiteboard
+
+Defining the part of the whiteboard that the robot is allowed to draw on. which can be changed using the minimum x and y values of the drawing region. From which the  xLim and yLim are calculated and saved in the "WhiteboardLimits.mat" file.
+
+![choosedrawableregion](https://user-images.githubusercontent.com/120835150/220183959-82e7cbbd-985c-4a30-b942-a936bfebc398.png)
 
 ## Image Processing
 
