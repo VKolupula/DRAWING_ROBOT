@@ -12,7 +12,7 @@
  
 ![1600781717-aek-ch4-sc4-2-define-distance-02](https://user-images.githubusercontent.com/120835150/219977172-91207024-ee42-460f-9767-39f0e8a19f4d.jpg)
 
-### Apply the Pythagorean theoram for the Distance
+### Calculating the Distance using Pythagorean theoram
 
 ![1600781720-aek-ch4-sc4-2-define-distance-03](https://user-images.githubusercontent.com/120835150/219977243-a05363d3-413f-45ab-b290-6ab16278579c.jpg)
 
@@ -37,7 +37,7 @@ The function "countsToXY(counts,Z_i,Base)" calculates the XY position of the Dra
 
 ![counttoxycode](https://user-images.githubusercontent.com/120835150/220167667-3afdcaa2-f0f9-40a5-81bd-dd9201b2dc74.PNG)
 
-### Convert Target position to Angular Displacement
+### Target position to Angular Displacement
 Using previous equation Z1 and Z2 computed the change in Z and the equivalent change in the string length.
 
 ![changeinz](https://user-images.githubusercontent.com/120835150/219978265-2519a5d0-0019-43cf-bf7f-4a970163eb93.PNG)
@@ -62,12 +62,12 @@ The function writeAngularPosition() automatically starts and stops the motors af
 ## Limitations of the Robot Movement
  After knowing how to program the robot movements, learned about some practical limitations of drawing using the robot and which areas are preferable to recreate the drawings.
 
-### Identify Position Limits
+### Position Limits
 If you try to move the robot to the top of the whiteboard, it won't have enough power to move above a certain point. If you try to move it too close to the pulleys, it will collide with them and get stuck. At the bottom of your whiteboard, there may be a marker tray you don't want the robot to run into.
 
 To determine what parts of the whiteboard the robot can reach and what parts you should avoid moving the robot to.
 
-### Understand Motor Equations and Stall Conditions
+### Motor Equations and Stall Conditions
 For a DC motor, a mathematical equation can be used to describe the relationship between motor load (torque), supply voltage, and rotational speed. This is sometimes referred to as the DC motor torque equation:
 
 ![DCmotortorqueequation](https://user-images.githubusercontent.com/120835150/220174909-99b03ebd-afb5-4ebb-9a28-ff3e1626dbf6.PNG)
@@ -82,7 +82,7 @@ The second special case is when the motor reaches stall conditions. This is when
 
 ![motorstallcaseformula](https://user-images.githubusercontent.com/120835150/220175879-a979218d-9629-4aa5-bcf6-1f6ae1429867.PNG)
 
-### Calculate Maximum Allowable Load
+### Maximum Allowable Load
 Considering the stall condition for the Drawing robot with the given battery and motor constants. Calculating the theoretical stall torque for given battery.
 
 ![stalltorqueforbattery](https://user-images.githubusercontent.com/120835150/220177122-a7d026c5-b363-4f0a-878a-f1e12216ee96.PNG)
@@ -118,7 +118,7 @@ The magnitude of the torque is then given as the product of the perpendicular fo
 
 ![F1F2formula](https://user-images.githubusercontent.com/120835150/220178877-87610b31-4a8a-4d2f-9197-68210ccc7bb2.PNG)
 
-### Compute torque at every position
+### Torque at every position
 Computing the torque load on each motor at every grid point. defining a single variable Tau that contains the larger of the two torque values at every position. You must never move the robot to a location where this value is greater than TauMax
  
 Using the surface plot to visualize motor load Tau, at every position on the whiteboard.
@@ -130,7 +130,7 @@ Removeing the regions the robot should not move to, on the Torque Map. These inc
 
 ![plotallowableregion](https://user-images.githubusercontent.com/120835150/220183260-b5290d29-53b8-405e-8011-fbf8659d7935.png)
 
-### Define and Save Drawing Limits of the Whiteboard
+### Limits of the Whiteboard
 Defining the part of the whiteboard that the robot is allowed to draw on. which can be changed using the minimum x and y values of the drawing region. From which the  xLim and yLim are calculated and saved in the "WhiteboardLimits.mat" file.
 
 ![choosedrawableregion](https://user-images.githubusercontent.com/120835150/220183959-82e7cbbd-985c-4a30-b942-a936bfebc398.png)
