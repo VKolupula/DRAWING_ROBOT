@@ -50,15 +50,6 @@ The function "xyToRadians()" converts position to angle using xy,Z_i and Base me
 
 ![xytoradianscode](https://user-images.githubusercontent.com/120835150/220169098-b19a9672-0080-4b77-bfb1-d3fc195496a8.PNG)
 
-### To move the robot through a series of specified positions on the whiteboard
-To move the robot through a series of specified positions on the whiteboard, the function moveToRadians() has been used.
-
-This function makes use of the angular displacement values obtained from the previous calculations to drive the motors to the specified locations. The functions uses a Closed-Loop Control to achieve the position control.
-
-A ‘For-Loop’ has been implemented to vectorize the function moveToRadians(), thereby allowing it to accept a vector input containing a series of target angular displacement values.
-
-The function writeAngularPosition() automatically starts and stops the motors after achieving the target angular displacement value. The PID algorithm implemented underneath constantly tracks the input values and hence responds to any changes in the input immediately.
-
 ## Limitations of the Robot Movement
  After knowing how to program the robot movements, learned about some practical limitations of drawing using the robot and which areas are preferable to recreate the drawings.
 
@@ -176,9 +167,26 @@ The "coords2segments()" function looks at every pair of pixels and determines lo
 
 ![racecarinsegments](https://user-images.githubusercontent.com/120835150/220201270-cbce621c-c642-4ced-bc8a-48ab7ecc9545.png)
 
-From the previous function, there might be segments with adjacent endpoints that could be merged with one another. This could reduce the total number of segments in the image. The function "connectSegments" does two things. First, it closes any segments that intersect themselves. Secondly, it merges any segments whose endpoints are adjacent. and also x and y pixel limits are Stored to scale the pixel values to meters.
+From the previous function, there might be segments with adjacent endpoints that could be merged with one another. This could reduce the total number of segments in the image. The function "connectSegments" does two things. First, it closes any segments that intersect themselves. Secondly, it merges any segments whose endpoints are adjacent.
 
 #### Merged connected segments:
 
 ![racecarconnetedsegments](https://user-images.githubusercontent.com/120835150/220201887-8c03ff95-9a17-46a4-93a9-320663c40800.png)
+
+
+## Draw Image From Pixels
+The function transformPixelsToMeters() converts pixels into meters using a scaling factor.
+
+![scaleingfactor](https://user-images.githubusercontent.com/120835150/221057256-97e043f6-644c-4794-9cae-aa45f2a3026a.PNG)
+
+
+To move the robot through a series of specified positions on the whiteboard, the function moveToRadians() has been used.
+
+This function makes use of the angular displacement values obtained from the previous calculations to drive the motors to the specified locations. The functions uses a Closed-Loop Control to achieve the position control.
+
+A ‘For-Loop’ has been implemented to vectorize the function moveToRadians(), thereby allowing it to accept a vector input containing a series of target angular displacement values.
+
+The function writeAngularPosition() automatically starts and stops the motors after achieving the target angular displacement value. The PID algorithm implemented underneath constantly tracks the input values and hence responds to any changes in the input immediately.
+
+
 
