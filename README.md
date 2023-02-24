@@ -1,10 +1,14 @@
 # DRAWING_ROBOT
 
- Build a robot that extracts line traces from an image and program it to reproduce and duplicate the images as a drawing on a whiteboard.
+ Building a robot that extracts line traces from an image and program it to reproduce and duplicate the images as a drawing on a whiteboard.
+ 
 
-## Applying Concepts from Trigonometry to Control The Movements of the Robot
+https://user-images.githubusercontent.com/120835150/221081599-b20e6e00-449c-48ea-821d-2bac6fcda727.mp4
 
- decompose the movements of the robot through trigonometry to calculate the distances that allow the robot to draw on the whiteboard. combined trigonometry with equations of motion to move the robot to specific points on your whiteboard. using MATLAB scripts and the information on the motors from its respective datasheet.
+
+## Controling The Movements of the Robot
+
+To calculate the distances that allow the robot to draw on the whiteboard. combining trigonometry with equations of motion to move the robot to specific points on your whiteboard. using MATLAB scripts and the information on the motors from its respective datasheet.
  
 ### Key parameters of the robot
 
